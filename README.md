@@ -1,3 +1,5 @@
-# ladder
+# Ladder
 
-Describe your project here.
+Imagine that you want to test some new realtime rendering algorithm ideas. You don't know whether it will work or not, but you want to try it out. You want to be able to quickly iterate on your ideas, and you want to be able to see the results in realtime. You also want to be able to easily share your results with others. It's not easy, big fight with GPU or CPU code you know. You want to do that in CPU first, then move to GPU. But their characteristic is different, you can't comapre algorithms directly. You need a tool to help you do that. Ladder is that tool.
+
+Ladder is a software rasterizer that operates in a manner similar to GPU. It has a frame buffer, shaders that appear as functions, and the same vertex/index buffer inputs. It adheres to several constraints imposed by the current graphics API. It strictly follows the rendering order, thereby supporting operations dependent on order, such as alpha blending, and generates deterministic outputs, which is crucial for verification purposes. Additionally, by adopting the correct rasterization rules, it ensures hole-free rasterization. You can compare the pressure of algorithms on the pipeline by measuring the time corresponding to each process. Of course, it is not identical to a real GPU, where the hardware graphics pipeline buffers data as little as possible and keeps it in on-chip memory. This behavior cannot be directly replicated in software.

@@ -9,3 +9,6 @@ wheels/
 # venv
 .venv
 .pytest_cache
+
+# function testing
+notebooks
